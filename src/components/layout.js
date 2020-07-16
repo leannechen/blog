@@ -1,12 +1,23 @@
 import React from "react"
 import containerStyles from "./container.module.css"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 export default function Layout({ children }) {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
   return (
     <div className={containerStyles.container}>
       <header className={containerStyles.header}>
-        <h3 className={containerStyles.title}>Leanne's Blog</h3>
+        <h3 className={containerStyles.title}>{data.site.siteMetadata.title}</h3>
         <ul className={containerStyles.navList}>
           <li className={containerStyles.navItem}>
             <Link to="/" className={containerStyles.navLink}>Home</Link>
