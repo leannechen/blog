@@ -2,7 +2,7 @@ import React from "react"
 import containerStyles from "./container.module.css"
 import { Link } from "gatsby"
 
-export default function Container({ children }) {
+export default function Layout({ children }) {
   return (
     <div className={containerStyles.container}>
       <header className={containerStyles.header}>
