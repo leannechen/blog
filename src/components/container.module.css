@@ -2,3 +2,33 @@
   margin: 3rem auto;
   max-width: 600px;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav-list {
+  margin-bottom: auto;
+}
+
+.nav-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: auto;
+}
+
+.nav-link {
+  padding: 0.6rem 1rem;
+  box-shadow: none;
+}
+
+.nav-link:hover {
+  color: blueviolet;
+}

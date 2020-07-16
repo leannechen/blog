@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Container from "../components/container"
 import styles from "./about-css-modules.module.css"
 
@@ -16,6 +17,7 @@ export default function AboutCSSModules() {
   return (
     <Container>
       <h1>About CSS Modules</h1>
+      <Link to="/">Go Home</Link>
       <p>CSS Modules are cool</p>
       <User
         username="Jane Doe"
