@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import styles from "./about-css-modules.module.css"
 
@@ -17,7 +16,6 @@ export default function AboutCSSModules() {
   return (
     <Layout>
       <h1>About CSS Modules</h1>
-      <Link to="/">Go Home</Link>
       <p>CSS Modules are cool</p>
       <User
         username="Jane Doe"

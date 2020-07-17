@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default function About({data}) {
@@ -10,7 +10,6 @@ export default function About({data}) {
         We're the only site running on your computer dedicated to showing the
         best photos and videos of pandas eating lots of food.
       </p>
-      <Link to="/">Go Home</Link>
     </Layout>
   )
 }

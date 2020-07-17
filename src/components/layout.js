@@ -17,7 +17,9 @@ export default function Layout({ children }) {
   return (
     <div className={containerStyles.container}>
       <header className={containerStyles.header}>
-        <h3 className={containerStyles.title}>{data.site.siteMetadata.title}</h3>
+        <Link to="/" className={containerStyles.titleLink}>
+          <h3 className={containerStyles.title}>{data.site.siteMetadata.title}</h3>
+        </Link>
         <ul className={containerStyles.navList}>
           <li className={containerStyles.navItem}>
             <Link to="/" className={containerStyles.navLink}>Home</Link>
