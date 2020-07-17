@@ -1,5 +1,5 @@
 import React from "react"
-import containerStyles from "./container.module.css"
+import layoutStyles from "./layout.module.css"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 export default function Layout({ children }) {
@@ -15,14 +15,14 @@ export default function Layout({ children }) {
     `
   )
   return (
-    <div className={containerStyles.container}>
-      <header className={containerStyles.header}>
-        <Link to="/" className={containerStyles.titleLink}>
-          <h3 className={containerStyles.title}>{data.site.siteMetadata.title}</h3>
+    <div className={layoutStyles.container}>
+      <header className={layoutStyles.header}>
+        <Link to="/" className={layoutStyles.titleLink}>
+          <h3 className={layoutStyles.title}>{data.site.siteMetadata.title}</h3>
         </Link>
-        <ul className={containerStyles.navList}>
-          <li className={containerStyles.navItem}>
-            <Link to="/about/" className={containerStyles.navLink}>About</Link>
+        <ul className={layoutStyles.navList}>
+          <li className={layoutStyles.navItem}>
+            <Link to="/about/" className={layoutStyles.navLink}>About</Link>
           </li>
         </ul>
       </header>
