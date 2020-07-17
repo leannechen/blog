@@ -13,14 +13,12 @@ export default function Home({ data }) {
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={node.fields.slug}>
-              <h3 className={indexStyles.itemTitle}>
-                {node.frontmatter.title}{" "}
-                <span>
-                — {node.frontmatter.date}
-              </span>
-              </h3>
-            </Link>
+            <h3 className={indexStyles.itemTitle}>
+              <Link to={node.fields.slug} className={indexStyles.itemLink}>
+                {node.frontmatter.title}
+              </Link>
+            </h3>
+            <span>{node.frontmatter.date}</span>
             <p>{node.excerpt}</p>
           </div>
         ))}

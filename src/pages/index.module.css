@@ -1,3 +1,7 @@
 .item-title {
   color: inherit;
 }
+
+.item-link {
+  box-shadow: none;
+}
