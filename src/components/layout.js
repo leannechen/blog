@@ -22,13 +22,7 @@ export default function Layout({ children }) {
         </Link>
         <ul className={containerStyles.navList}>
           <li className={containerStyles.navItem}>
-            <Link to="/" className={containerStyles.navLink}>Home</Link>
-          </li>
-          <li className={containerStyles.navItem}>
             <Link to="/about/" className={containerStyles.navLink}>About</Link>
-          </li>
-          <li className={containerStyles.navItem}>
-            <Link to="/about-css-modules/" className={containerStyles.navLink}>CSS Modules</Link>
           </li>
         </ul>
       </header>
