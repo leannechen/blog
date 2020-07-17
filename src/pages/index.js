@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import indexStyles from "./index.module.css"
 
 export default function Home({ data }) {
-  console.log(data)
   return (
     <Layout>
       <div>
@@ -14,7 +14,7 @@ export default function Home({ data }) {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.fields.slug}>
-              <h3>
+              <h3 className={indexStyles.itemTitle}>
                 {node.frontmatter.title}{" "}
                 <span>
                 — {node.frontmatter.date}
