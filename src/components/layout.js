@@ -27,11 +27,6 @@ export default function Layout({ children }) {
         </ul>
       </header>
       {children}
-      <footer>
-        <a href="https://twitter.com">Twitter</a>
-        •
-        <a href="https://github.com">Github</a>
-      </footer>
     </div>
   )
 }
