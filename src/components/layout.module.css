@@ -18,22 +18,3 @@
 .title-link {
   box-shadow: none;
 }
-
-.nav-list {
-  margin-bottom: auto;
-}
-
-.nav-item {
-  display: inline-block;
-  list-style: none;
-  margin-bottom: auto;
-}
-
-.nav-link {
-  padding: 0.6rem 1rem;
-  box-shadow: none;
-}
-
-.nav-link:hover {
-  color: blueviolet;
-}

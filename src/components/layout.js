@@ -20,11 +20,6 @@ export default function Layout({ children }) {
         <Link to="/" className={layoutStyles.titleLink}>
           <h3 className={layoutStyles.title}>{data.site.siteMetadata.title}</h3>
         </Link>
-        <ul className={layoutStyles.navList}>
-          <li className={layoutStyles.navItem}>
-            <Link to="/about/" className={layoutStyles.navLink}>About</Link>
-          </li>
-        </ul>
       </header>
       {children}
     </div>
