@@ -1,7 +1,21 @@
+.list {
+  margin-left: 0;
+}
+
+.item {
+  list-style: none;
+}
+
 .item-title {
   color: inherit;
+  margin-bottom: .4rem;
 }
 
 .item-link {
   box-shadow: none;
+}
+
+.item-date {
+  color: hsl(0,0%,100%,0.7);
+  font-size: .9rem;
 }

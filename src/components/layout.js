@@ -21,7 +21,9 @@ export default function Layout({ children }) {
           <h3 className={layoutStyles.title}>{data.site.siteMetadata.title}</h3>
         </Link>
       </header>
-      {children}
+      <main>
+        {children}
+      </main>
     </div>
   )
 }

@@ -11,17 +11,19 @@ export default function Home({ data }) {
           Amazing Pandas Eating Things
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <h3 className={indexStyles.itemTitle}>
-              <Link to={node.fields.slug} className={indexStyles.itemLink}>
-                {node.frontmatter.title}
-              </Link>
-            </h3>
-            <span>{node.frontmatter.date}</span>
-            <p>{node.excerpt}</p>
-          </div>
-        ))}
+        <ul className={indexStyles.list}>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <li key={node.id} className={indexStyles.item}>
+              <h3 className={indexStyles.itemTitle}>
+                <Link to={node.fields.slug} className={indexStyles.itemLink}>
+                  {node.frontmatter.title}
+                </Link>
+              </h3>
+              <span className={indexStyles.itemDate}>{node.frontmatter.date}</span>
+              <p>{node.excerpt}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </Layout>
   )

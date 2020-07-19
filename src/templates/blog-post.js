@@ -8,10 +8,11 @@ export default function BlogPost({ data }) {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <main>
+      <article>
         <h1>{post.frontmatter.title}</h1>
+        <p>{post.frontmatter.date}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </main>
+      </article>
       <hr/>
       <footer>
       {/* todo: About author image */}
@@ -29,6 +30,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "DD MMMM, YYYY")
       }
       excerpt
     }
