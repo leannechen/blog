@@ -6,7 +6,7 @@ parnassusTheme.bodyColor = `hsl(0,0%,100%,0.8)`
 
 parnassusTheme.overrideThemeStyles = () => ({
   'a': {
-    color: `#CFED82`
+    color: `#ccff49`
   }
 })
 
