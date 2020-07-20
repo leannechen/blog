@@ -17,8 +17,9 @@ export default function BlogPost({ data }) {
       <footer>
       {/* todo: About author image */}
         <p>
-          <img src="../images/hamster-with-wheat-dumbbells.jpg" alt=""/>
-          Article by <Link to="/about/">Leanne</Link></p>
+          {/*<img src="../images/hamster-with-wheat-dumbbells.jpg" alt=""/>*/}
+          Article by <Link to="/about/">Leanne</Link>
+        </p>
       </footer>
     </Layout>
   )

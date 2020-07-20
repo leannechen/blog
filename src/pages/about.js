@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 
 export default function About({ data }) {
@@ -27,15 +28,20 @@ export default function About({ data }) {
       </p>
       {/* todo: Hamster's photo */}
       {/*<img src="../images/hamster-with-wheat-dumbbells.jpg" alt=""/>*/}
+      <Img fixed={data.file.childImageSharp.fixed} />
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
-    site {
-      siteMetadata {
-        title
+    file(relativePath: { eq: "img/hamster-2.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }
