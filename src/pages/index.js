@@ -7,20 +7,17 @@ export default function Home({ data }) {
   return (
     <Layout>
       <div>
-        <h1>
-          Amazing Pandas Eating Things
-        </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         <ul className={indexStyles.list}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <li key={node.id} className={indexStyles.item}>
-              <h3 className={indexStyles.itemTitle}>
-                <Link to={node.fields.slug} className={indexStyles.itemLink}>
+              <Link to={node.fields.slug} className={indexStyles.itemLink}>
+                <h3 className={indexStyles.itemTitle}>
                   {node.frontmatter.title}
-                </Link>
-              </h3>
-              <span className={indexStyles.itemDate}>{node.frontmatter.date}</span>
-              <p>{node.excerpt}</p>
+                </h3>
+                <span className={indexStyles.itemDate}>{node.frontmatter.date}</span>
+                <p>{node.excerpt}</p>
+              </Link>
             </li>
           ))}
         </ul>

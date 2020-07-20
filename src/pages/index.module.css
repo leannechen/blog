@@ -6,13 +6,20 @@
   list-style: none;
 }
 
-.item-title {
-  color: inherit;
-  margin-bottom: .4rem;
+.item-link {
+  display: block;
+  box-shadow: none;
+  color: hsl(0,0%,100%,0.8);
+  padding: 1.5rem;
 }
 
-.item-link {
-  box-shadow: none;
+.item-link:hover {
+  background-color: hsl(330, 5%, 16%);
+}
+
+.item-title {
+  margin-bottom: .4rem;
+  margin-top: 0;
 }
 
 .item-date {
