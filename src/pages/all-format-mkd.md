@@ -1,5 +1,5 @@
 ---
-title: 使用 Gatsby 快速打造自己的 blog
+title: 所有格式都在這裡了
 date: 2020-04-15
 ---
 

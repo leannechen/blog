@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `倉鼠控的前端工程師`,
-    description: `工程師囤積知識跟倉鼠囤積食物一樣`,
+    description: `倉鼠囤積食物正如工程師囤積知識`,
     author: `Leanne Chen`,
   },
   plugins: [
@@ -32,6 +32,34 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: "±",
+              aliases: {
+                sh: "bash", // highlight "sh" as bash
+              },
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [],
+              // Customize the prompt used in shell output
+              // Values below are default
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              escapeEntities: {},
+            },
+          },
+        ],
       },
     },
     {
