@@ -15,7 +15,7 @@ export default function Home({ data }) {
                 <h3 className={indexStyles.itemTitle}>
                   {node.frontmatter.title}
                 </h3>
-                <span className={indexStyles.itemDate}>{node.frontmatter.date}</span>
+                <p className={indexStyles.itemDate}>{node.frontmatter.date}</p>
                 <p>{node.excerpt}</p>
               </Link>
             </li>
