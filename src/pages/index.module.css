@@ -8,7 +8,7 @@
 
 .item-link {
   display: block;
-  box-shadow: none;
+  text-decoration: none;
   color: hsl(0,0%,100%,0.8);
   padding: 1.5rem 0;
 }

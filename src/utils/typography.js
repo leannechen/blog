@@ -1,16 +1,19 @@
 import Typography from "typography"
-import parnassusTheme from "typography-theme-parnassus"
+import githubTheme from "typography-theme-github"
 
-parnassusTheme.headerColor = `hsl(0,0%,100%,0.9)`
-parnassusTheme.bodyColor = `hsl(0,0%,100%,0.8)`
+githubTheme.headerColor = `hsl(0,0%,100%,0.9)`
+githubTheme.bodyColor = `hsl(0,0%,100%,0.8)`
 
-parnassusTheme.overrideThemeStyles = () => ({
+githubTheme.overrideThemeStyles = () => ({
   'a': {
     color: `#ccff49`
+  },
+  'a:hover': {
+    'text-decoration': `none`
   }
 })
 
-const typography = new Typography(parnassusTheme)
+const typography = new Typography(githubTheme)
 
 export const { scale, rhythm, options } = typography
 export default typography
