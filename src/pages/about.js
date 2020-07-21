@@ -11,24 +11,17 @@ export default function About({ data }) {
         高雄人，最近的興趣是做菜、觀察家裏黃金鼠（如圖）的生態跟爬山<br/>
         很高興認識你！
       </p>
-      <p>
-        Hi there, it's Leanne - an enthusiastic web engineer. <br/>
-        I am from Taiwan, a small and beautiful country. <br/>
-        My interests outside of work are cooking, hiking, and observing my hamster's way of life. <br/>
-        Nice to meet you!
-      </p>
+      <Img fixed={data.file.childImageSharp.fixed} />
+      <hr/>
       <p>
         <a href="mailto:leannechen.tw@gmail.com">Email</a>
-         •
+        •
         <a href="https://github.com/leannechen" target="_blank" rel="noreferrer">Github</a>
-         •
+        •
         <a href="https://www.linkedin.com/in/lianchentw/" target="_blank" rel="noreferrer">LinkedIn</a>
-         •
+        •
         <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
       </p>
-      {/* todo: Hamster's photo */}
-      {/*<img src="../images/hamster-with-wheat-dumbbells.jpg" alt=""/>*/}
-      <Img fixed={data.file.childImageSharp.fixed} />
     </Layout>
   )
 }

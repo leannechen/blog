@@ -6,9 +6,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`,
-    description: `A simple description about pandas eating lots...`,
-    author: `Panda King`,
+    title: `倉鼠控的前端工程師`,
+    description: `工程師囤積知識跟倉鼠囤積食物一樣`,
+    author: `Leanne Chen`,
   },
   plugins: [
     {

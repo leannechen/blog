@@ -9,6 +9,7 @@ export default function Layout({ children }) {
         site {
           siteMetadata {
             title
+            description
           }
         }
       }
@@ -20,6 +21,7 @@ export default function Layout({ children }) {
         <Link to="/" className={layoutStyles.titleLink}>
           <h3 className={layoutStyles.title}>{data.site.siteMetadata.title}</h3>
         </Link>
+        <p>{data.site.siteMetadata.description}</p>
       </header>
       <main>
         {children}
