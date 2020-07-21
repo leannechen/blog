@@ -1,12 +1,13 @@
 import Typography from "typography"
 import githubTheme from "typography-theme-github"
+import { primary, headerText, bodyText } from "./color"
 
-githubTheme.headerColor = `hsl(0,0%,100%,0.9)`
-githubTheme.bodyColor = `hsl(0,0%,100%,0.8)`
+githubTheme.headerColor = headerText
+githubTheme.bodyColor = bodyText
 
 githubTheme.overrideThemeStyles = () => ({
   'a': {
-    color: `#ccff49`
+    color: primary
   },
   'a:hover': {
     'text-decoration': `none`
