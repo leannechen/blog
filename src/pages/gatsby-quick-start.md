@@ -28,7 +28,7 @@ Gatsby 是一個 **static site generator**。相較一般的 SPA 有完整的 HT
 ## II. 如何開始一個 Gatsby 專案？
 1. 安裝 `gatsby-cli`
 
-```sh
+```bash
 // yarn
 yarn global add gatsby-cli
 
@@ -37,19 +37,19 @@ npm install -g gatsby-cli
 ```
 
 2. 新建一個 Gatsby 專案
-```sh
+```bash
 gatsby new my-gatsby-project
 ```
 
 也可以使用 Gatsby starter project 作為初始專案樣本，指令為
-```sh
+```bash
 gatsby new gatsby-starter-default https://github.com/gatsbyjs/gatsby-starter-default
 ```
 可以在[這裡]((https://www.gatsbyjs.org/starters/?v=2))找到其他 starters
 
 
 3. 啟動開發用的 local server
-```sh
+```bash
 // 進入資料夾
 cd my-first-gatsby-project
 // 啟動
@@ -60,12 +60,12 @@ gatsby develop
 4. 建置
 
 建置一個 production build 版本，含有產生的靜態 HTML跟 by route 的 JavaScript bundle
-```sh
+```bash
 gatsby build
 ```
 
 檢視 production
-```sh
+```bash
 gatsby serve
 ```
 在本機檢視 production 版本，可在  http://localhost:9000 看到結果
