@@ -1,11 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import indexStyles from "./index.module.css"
 
 export default function Home({ data }) {
   return (
     <Layout>
+      <SEO title="首頁" description={data.site.siteMetadata.description} />
       <div>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         <ul className={indexStyles.list}>
@@ -28,6 +30,12 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
