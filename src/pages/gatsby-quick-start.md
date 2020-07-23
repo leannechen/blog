@@ -1,7 +1,11 @@
 ---
-title: 簡單介紹 Gatsby
+title: 什麼是 GatsbyJS
 date: 2020-07-12
 ---
+
+這篇文章的重點在於介紹 Gatsby 核心概念、使用時機以及基本教學
+
+<!-- endexcerpt -->
 
 ## I. 使用 Gatsby 的理由
 
@@ -9,13 +13,17 @@ date: 2020-07-12
 1. SEO 對你的網站來說很重要
 1. 你想要順暢快速的使用者體驗
 
-### Gatsby 可以提供什麼給你？
-1. ES6 JavaScript+React+GraphQL+Webpack 等當代前端主流技術，學習曲線不陡峭
+### Gatsby 的優點？
+1. ES6 JavaScript + React + GraphQL + Webpack 等當代前端主流技術，學習曲線不陡峭
 2. 可輕易串接 CMS 編輯好的內容。ex. WordPress、markdown。
 3. 順暢的開發體驗，包括 React component 架構、 hot module reloading, 處理好的 webpack 設定等。
 4. 優良的效能調校，包括 bundle splitting, asset prefetching, offline support, image optimization, 以及 server side rendering
 
-Gatsby 是一個 static site renderer。因為相較一般的 SPA 有完整的 HTML markup，所以SEO效果優良。跟有同樣效果的 server side render(SSR) 不一樣的地方，在於 SSR 是在收到 request 之後，伺服器才產生需要的 HTML 給前端；而 static render 則是在 request 之前就已經將 HTML 產生好等待送出了。因為需要事先在 build time 產出頁面，所以適合頁面數量較少、規模較小的網站，例如個人網誌。如果是需要成千上萬頁面（例如大型電商平台），無法預測使用者輸入（例如搜尋引擎）的情況，就比較不適合。
+
+### 運作原理跟特色
+Gatsby 是一個 **static site generator**。相較一般的 SPA 有完整的 HTML markup，所以SEO效果優良。跟有同樣效果的 server side render(SSR) 不一樣的地方，在於 SSR 是在收到 request 之後，伺服器才產生需要的 HTML 給前端；而 static render 則是在 request 之前就已經將 HTML 產生好等待送出了。因為需要事先在 build time 產出頁面，所以適合頁面數量較少、規模較小的網站，例如個人網誌。如果是需要成千上萬頁面（例如大型電商平台），無法預測使用者輸入（例如搜尋引擎）的情況，就比較不適合。
+
+在下面開始的教學，你會注意到 Gatsby 的主要指令有 `bash±gatsby develop` 與 `bash±gatsby build`。前者功能在於開發時期從 local 端起 webpack server，後者功能在啟動準備發佈前的建置作業。 
 
 ## II. 如何開始一個 Gatsby 專案？
 1. 安裝 `gatsby-cli`
@@ -118,7 +126,6 @@ const Button = styled.a`
   display: inline-block;
   padding: 0.5rem 0;
   background: deepskyblue;
-  color: white;
 `
 
 render(
