@@ -141,6 +141,6 @@ render(
 
 ```
 
-#### Reference
+## III. 參考資料
 - [GatsbyJS](https://www.gatsbyjs.org/)
 - [Static vs. Server Rendering | Frontend Armory](https://frontarm.com/james-k-nelson/static-vs-server-rendering/)
