@@ -71,7 +71,33 @@ gatsby serve
 ```
 在本機檢視 production 版本，可在  http://localhost:9000 看到結果
 
+如果你是用從 `gatsby-starter-default` 的話，可以看到這樣的檔案結構
 
+```markdown
+.
+root
+  ├──package.json
+  ├──node_modules
+  ├──gatsby-config.js
+  └─src
+    ├─ pages
+    │   ├─ index.js
+    │   └─ page-2.js
+    ├─ components
+    │     ├─ header.js
+    │     └─ layout.js
+    └─ images
+         ├─ gatsby-astronaut.png
+         └─ gatsby-icon.png
+    ...
+```
+
+在這裏，`pages` 資料夾底下的 module（通常為 .js 或 .jsx）將被視為 page component，一個檔案就是一個頁面。所以這裡會有 index 與 page-2 兩頁。
+
+Gatsby 會相應地產生他們的網址路徑，並且會做 code splitting。單位都是一個 page（這部分跟 Next 滿像的）。
+
+順帶補充下，React Component 分為 page 跟 component 兩種性質。Page 是單一一個頁面，使用者在同個瀏覽器頁籤的一個網址下，只會看到一個頁面。以樹來比喻是枝幹。而 component 則可以在頁面上同時存在好幾個，例如 Header, Navigation, Modal, Button 都是。以樹來說像是葉子，生長在枝幹（頁面）上的葉子。
+      在 Gatsby 中也不例外。我們會按照這個 component 的性質，決定他要分類在 page 或是 component。
 
 ### Styles
 Gatsby 的 styles 有兩種進路，一種是 CSS modules，一種是 CSS-in-JS。
