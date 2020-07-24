@@ -8,33 +8,31 @@
 
 .item-link {
   display: flex;
+  justify-content: space-between;
   text-decoration: none;
   color: hsl(0,0%,100%,0.8);
   padding: 1.5rem 0;
 }
 
-.item-title {
-  display: inline-block;
-  margin-bottom: .4rem;
-  margin-top: 0;
-  padding-bottom: 0.3rem;
-  border-bottom: 3px solid transparent;
-}
-// todo: apply only on hoverable device
+/* todo: apply only on hoverable device */
 .item-link:hover .item-title {
   border-bottom-color: #CCFF4F;
-}
-
-.item-date {
-  color: hsl(0,0%,100%,0.7);
-  font-size: .9rem;
-  margin-bottom: .8rem;
 }
 
 .item-left {
   margin-right: 4%;
 }
 
-.item-right {
+.item-title {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid transparent;
+}
 
+.item-date {
+  color: hsl(0,0%,100%,0.7);
+  font-size: .9rem;
+  margin-bottom: .5rem;
 }
