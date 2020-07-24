@@ -7,12 +7,11 @@
 }
 
 .item-link {
-  display: block;
+  display: flex;
   text-decoration: none;
   color: hsl(0,0%,100%,0.8);
   padding: 1.5rem 0;
 }
-
 
 .item-title {
   display: inline-block;
@@ -21,7 +20,7 @@
   padding-bottom: 0.3rem;
   border-bottom: 3px solid transparent;
 }
-
+// todo: apply only on hoverable device
 .item-link:hover .item-title {
   border-bottom-color: #CCFF4F;
 }
@@ -30,4 +29,12 @@
   color: hsl(0,0%,100%,0.7);
   font-size: .9rem;
   margin-bottom: .8rem;
+}
+
+.item-left {
+  margin-right: 4%;
+}
+
+.item-right {
+
 }

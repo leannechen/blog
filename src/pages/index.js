@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import indexStyles from "./index.module.css"
+import Img from "gatsby-image"
 
 export default function Home({ data }) {
   return (
@@ -14,11 +15,18 @@ export default function Home({ data }) {
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <li key={node.id} className={indexStyles.item}>
               <Link to={node.fields.slug} className={indexStyles.itemLink}>
-                <h3 className={indexStyles.itemTitle}>
-                  {node.frontmatter.title}
-                </h3>
-                <p className={indexStyles.itemDate}>{node.frontmatter.date}</p>
-                <p>{node.excerpt}</p>
+                <div className={indexStyles.itemLeft}>
+                  <h3 className={indexStyles.itemTitle}>
+                    {node.frontmatter.title}
+                  </h3>
+                  <p className={indexStyles.itemDate}>{node.frontmatter.date}</p>
+                  <p>{node.excerpt}</p>
+                </div>
+                <div className={indexStyles.itemRight}>
+                  { node.frontmatter.featuredImage &&
+                    <Img fixed={node.frontmatter.featuredImage.childImageSharp.fixed} />
+                  }
+                </div>
               </Link>
             </li>
           ))}
@@ -44,6 +52,13 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            featuredImage {
+              childImageSharp {
+                fixed(width: 120, height: 120) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
           fields {
             slug

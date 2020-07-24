@@ -1,23 +1,25 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
+  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <article>
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.date}</p>
+        <Img fluid={featuredImgFluid} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
       <hr/>
       <footer>
       {/* todo: About author image */}
         <p>
-          {/*<img src="../images/hamster-with-wheat-dumbbells.jpg" alt=""/>*/}
           Article by <Link to="/about/">Leanne</Link>
         </p>
       </footer>
@@ -32,6 +34,13 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "DD MMMM, YYYY")
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       excerpt
     }
