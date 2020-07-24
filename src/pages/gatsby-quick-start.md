@@ -123,21 +123,21 @@ let SomeComponent = props => {
 Styled Component:
 
 ```jsx
-const Button = styled.a`
+const LinkButton = styled.a`
   display: inline-block;
   padding: 0.5rem 0;
   background: deepskyblue;
 `
 
 render(
-  <Button
-    href="https://github.com/styled-components/styled-components"
+  <LinkButton
+    href="https://www.google.com"
     target="_blank"
     rel="noopener"
     primary
   >
     Click Me!
-  </Button>
+  </LinkButton>
 )
 
 ```
