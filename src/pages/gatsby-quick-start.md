@@ -115,13 +115,13 @@ Gatsby 的 styles 有兩種進路，一種是 CSS modules，一種是 CSS-in-JS�
 ```jsx
 // page1.jsx
 import page1Styles from "./page1.module.css"
-<button className={page1Styles.btnBlue}>Click Me!</button>
+<button className={page1Styles.btnBlue}>送出</button>
 ```
 
-編譯後會自動轉為
+編譯後會自動轉為像這樣的 class name
 
 ```html
-<button class="page1-module--btn-blue--29dQa">Click Me!</button>
+<button class="page1-module--btn-blue--29dQa">送出</button>
 ```
 
 #### 2. CSS-in-JS
@@ -162,7 +162,7 @@ render(
     rel="noopener"
     primary
   >
-    Click Me!
+    送出
   </LinkButton>
 )
 
