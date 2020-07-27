@@ -1,7 +1,7 @@
 ---
 title: 什麼是 GatsbyJS
 date: 2020-07-12
-featuredImage: ../img/gatsby.png
+featuredImage: ../img/article_gatsby.png
 ---
 
 這篇文章的重點在於介紹 Gatsby 核心概念、使用時機以及基本教學

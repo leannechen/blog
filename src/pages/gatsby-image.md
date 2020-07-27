@@ -1,10 +1,10 @@
 ---
 title: Gatsby 圖片處理進路解說
 date: 2020-07-25
-featuredImage: ../img/gatsby.png
+featuredImage: ../img/article_tokyo-night-view.jpg
 ---
 
-簡單說明在 Gatsby 中怎麼處理圖片 
+在 Gatsby 中如何處理圖片與各個套件用途解說 
 
 <!-- endexcerpt -->
 
@@ -146,3 +146,5 @@ export const query = graphql`
 - [Working with Images | GatsbyJS](https://www.gatsbyjs.org/docs/working-with-images/)
 - [gatsby-image | GatsbyJS](https://www.gatsbyjs.org/packages/gatsby-image/)
 - [gatsby-plugin-sharp | GatsbyJS](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/)
+
+> 封面圖片來源：[東京タワーと都市夜景（フォトモンタージュ）のフリー素材](https://www.pakutaso.com/20191134331post-24352.html)
