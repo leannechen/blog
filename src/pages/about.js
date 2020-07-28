@@ -2,13 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default function About({ data }) {
   return (
     <Layout>
+      <SEO title="About me" description="嗨，我是熱愛前端技術的工程師 Leanne" />
       <h1>About me</h1>
-      <p>嗨，我是個熱愛前端工藝技術的工程師 Leanne<br/>
-        高雄人，最近的興趣是做菜、觀察家裏黃金鼠（如圖）的生態跟爬山<br/>
+      <p>嗨，我是熱愛前端工藝、飼養倉鼠的前端工程師 Leanne<br/>
         很高興認識你！
       </p>
       <Img fixed={data.file.childImageSharp.fixed} />
@@ -18,7 +19,7 @@ export default function About({ data }) {
         •
         <a href="https://github.com/leannechen" target="_blank" rel="noreferrer">Github</a>
         •
-        <a href="https://www.linkedin.com/in/lianchentw/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/leannechentw/" target="_blank" rel="noreferrer">LinkedIn</a>
         •
         <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
       </p>
