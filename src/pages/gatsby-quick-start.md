@@ -4,7 +4,7 @@ date: 2020-07-12
 featuredImage: ../img/article_gatsby.png
 ---
 
-這篇文章的重點在於介紹 Gatsby 核心概念、使用時機以及基本教學
+這篇文章會介紹 [Gatsby](https://www.gatsbyjs.org/) 的核心概念、使用時機以及基本教學
 
 <!-- endexcerpt -->
 
@@ -38,6 +38,7 @@ npm install -g gatsby-cli
 ```
 
 2. 新建一個 Gatsby 專案
+
 ```bash
 gatsby new my-gatsby-project
 ```
@@ -50,6 +51,7 @@ gatsby new gatsby-starter-default https://github.com/gatsbyjs/gatsby-starter-def
 
 
 3. 啟動開發用的 local server
+
 ```bash
 // 進入資料夾
 cd my-first-gatsby-project
@@ -96,7 +98,7 @@ root
 
 Gatsby 會相應地產生他們的網址路徑，並且會做 code splitting。單位都是一個 page（這部分跟 Next 滿像的）。
 
-順帶補充下，React Component 分為 page 跟 component 兩種性質。Page 是單一一個頁面，使用者在同個瀏覽器頁籤的一個網址下，只會看到一個頁面。以樹來比喻是枝幹。而 component 則可以在頁面上同時存在好幾個，例如 Header, Navigation, Modal, Button 都是。以樹來說像是葉子，生長在枝幹（頁面）上的葉子。
+至於 `components` 的資料夾，則是用來置放 components。React Component 分為 page 跟 component 兩種性質。Page 是單一一個頁面，使用者在同個瀏覽器頁籤的一個網址下，只會看到一個頁面。以樹來比喻是枝幹。而 component 則可以在頁面上同時存在好幾個，例如 Header, Navigation, Modal, Button 都是。以樹來說像是葉子，生長在枝幹（頁面）上的葉子。
       在 Gatsby 中也不例外。我們會按照這個 component 的性質，決定他要分類在 page 或是 component。
 
 ### Styles
@@ -125,8 +127,7 @@ import page1Styles from "./page1.module.css"
 ```
 
 #### 2. CSS-in-JS
-CSS-in-JS 的方案常見的有 [Emotion](https://github.com/emotion-js/emotion) 與 [Styled Component](https://styled-components.com/)。主要特色是將 CSS styles 寫在 JS，無論是共享或繼承都是以 JavaScript object 的方式處理。
-範例：
+CSS-in-JS 的方案常見的有 [Emotion](https://github.com/emotion-js/emotion) 與 [Styled Component](https://styled-components.com/)。主要特色是將 CSS styles 寫在 JS，無論是共享或繼承都是以 JavaScript object 的方式處理。範例：
 
 Emotion:
 ```jsx
@@ -137,7 +138,7 @@ let SomeComponent = props => {
   return (
     <div
       css={{
-        color: 'hotpink'
+        color: 'deepskyblue'
       }}
       {...props}
     />
