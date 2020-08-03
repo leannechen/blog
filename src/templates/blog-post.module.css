@@ -1,0 +1,19 @@
+.markdown blockquote {
+  color: inherit;
+  background-color: #365a61;
+  padding: 1rem 1.5rem;
+  border-left: 6px solid hsl(0deg 0% 0% / 28%);
+  border-radius: 4px;
+}
+
+.markdown blockquote a {
+  color: #68C3D4;
+}
+
+.markdown td {
+  border-bottom: 1px solid #808080;
+}
+
+.markdown thead {
+  border-bottom: 3px solid #cfcfcf;
+}

@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import blogPostStyles from "./blog-post.module.css"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -14,7 +15,7 @@ export default function BlogPost({ data }) {
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.date}</p>
         <Img fluid={featuredImgFluid} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className={blogPostStyles.markdown} dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
       <hr/>
       <footer>
