@@ -16,7 +16,7 @@
 
 /* todo: apply only on hoverable device */
 .item-link:hover .item-title {
-  border-bottom-color: #CCFF4F;
+  border-bottom-color: #FFCC34;
 }
 
 .item-left {
