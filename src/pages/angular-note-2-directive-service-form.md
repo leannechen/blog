@@ -6,6 +6,7 @@ featuredImage: ../img/article_angular.png
 
 關於 Angular 2+ 的 directive, service, form
 
+<!-- endexcerpt -->
 
 ### Attribute Directives
 - Directive 是 global 的

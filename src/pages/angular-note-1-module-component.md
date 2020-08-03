@@ -6,6 +6,8 @@ featuredImage: ../img/article_angular.png
 
 關於 Angular 2+ 的基本觀念，包括 module, component
 
+<!-- endexcerpt -->
+
 ## Basics
 
 - Constructor: Reserve the constructor for simple initialization such as wiring constructor parameters to properties. The constructor shouldn't do anything.
