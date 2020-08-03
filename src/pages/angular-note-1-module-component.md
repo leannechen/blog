@@ -22,7 +22,7 @@ featuredImage: ../img/article_angular.png
 - 資料只會有一個進入點，而且常會是 service。比如 mock hero data 就會進 hero service，此後其他元件需要這些資料就為透過 hero service 來取得跟修改
 
 ### CSS scope
-CSS 的部分，各組件有自己的 local scope，即便是 element selector ex. `<h2>, <body>, <p>` 也可以放心大膽地下，轉譯後會變成 `body[_ngcontent-fvx-c0]` 這樣的 selector
+CSS 的部分，各組件有自己的 local scope，即便是 element selector ex. `html±<h2>, <body>, <p>` 也可以放心大膽地下，轉譯後會變成 `css±body[_ngcontent-fvx-c0]` 這樣的 selector
 
 
 ## Module
@@ -77,7 +77,7 @@ CSS 的部分，各組件有自己的 local scope，即便是 element selector e
 - Core Module：當應用程式有 singleton 需求時，把所有 service 統一在此模組內，此方法在 Angular 6 後使用的機會開始漸漸減少
 
 
-> **Singleton 單體模式**
+> **Singleton 單體模式**  
 > Singleton 的概念就是同一個 class 只能建立唯一一個實體物件（或稱為實例，instance）。當第二次使用同一個 class 建立新物件的時候，我們會得到和第一次建立時同一個物件
 
 
@@ -114,24 +114,6 @@ CSS 的部分，各組件有自己的 local scope，即便是 element selector e
 | 3-3-2 | ngAfterViewChecked    | 每當 Angular 做完元件 view 和子 view 的變更檢測之後呼叫<br><br>- 偵測 child view 變化<br>- 更新必須在 setTimeout(callback, 0) 中<br>- 單向資料流<br>- `@ViewChild`, `this.viewChild`                           |
 | 4     | ngOnDestroy           | 每當 Angular 每次銷毀指令/元件之前呼叫並清掃。 在這裡反訂閱可觀察物件和分離事件處理器，以防記憶體洩漏。                                                                                                                      |
 
-
-- `@ViewChild`, `this.viewChild`
-
-Content:
-
-```html
-<after-content>
-  <app-child></app-child>
-</after-content>
-```
-
-View:
-
-```html
-<div>-- child view begins --</div>
-  <app-child-view></app-child-view>
-<div>-- child view ends --</div>`
-```
 
 ### 關於結構的設計方式
 
@@ -171,22 +153,22 @@ View:
 
 ## Component Styles
 
-- `:host` 用來 style 指定 component tag 本身的 style
-- `:host-context` 
+- `css±:host` 用來 style 指定 component tag 本身的 style
+- `css±:host-context` 
 - 副檔名 .scss, .sass 沒差，Angular 都會自動幫你轉譯成 CSS，從 stylesUrl 引入就好了
 
-> ### Related information
+> **Related information**
 > - Shadow DOM
 >   - 最大用處：封裝 encapsulation
 >   - 可以想像成斗篷
 >   - mode 可決定斗篷內東西是否開放給外界看跟查詢
 >   - 其他操作跟一般的 DOM 沒有兩樣
->   - `.attachShadow()` = 建立並在 host element 附著一個 shadow root
->   - Browser 早已實作，比如 `<video>` 的 controls 按鈕
+>   - `javascript±.attachShadow()` = 建立並在 host element 附著一個 shadow root
+>   - Browser 早已實作，比如 `html±<video>` 的 controls 按鈕
 > - `encapsultaion:` component 設定：決定要真正變成 Shadow DOM（注意瀏覽器支援度）、模擬 Shadow DOM（預設）還是不要封裝
 
-> ### 相關閱讀
-> - https://medium.com/better-programming/angular-vs-react-change-detection-c54ae33139fe
-> - https://ithelp.ithome.com.tw/articles/10188047
-> - https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM
-> - https://dotblogs.com.tw/wellwind/2017/06/21/dynamic-component-with-component-factory-resolver 把 <ng-template> 說明的很清楚
+> **相關閱讀**
+> - [Angular vs. React: Change Detection](https://medium.com/better-programming/angular-vs-react-change-detection-c54ae33139fe)
+> - [Lifecycle Hooks 學習筆記 (一) - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10188047)
+> - [Using shadow DOM - Web Components | MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+> - [[Angular進階議題]使用ComponentFactoryResolver動態產生Component | 全端開發人員天梯 - 點部落](https://dotblogs.com.tw/wellwind/2017/06/21/dynamic-component-with-component-factory-resolver)

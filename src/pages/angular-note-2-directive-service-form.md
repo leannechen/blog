@@ -106,19 +106,16 @@ Component 與他的 HTML 互相信任，所以 HTML 要使用 component 內 valu
 
 #### API
 
-1. ReactiveFormModules
-2. FormControl ( `name = new FormControl('Anna');`)
-    1. Set initial value here
-
 #### Form Model 作為值的來源，變化是在一個 observable stream 中的
 
 Usage:
 
-    name = new FormControl('Anna')
-    {{ name.value }}
-    name.setValue('Nancy')
-    name.untouched
-
+```javscript
+name = new FormControl('Anna')
+{{ name.value }}
+name.setValue('Nancy')
+name.untouched
+```
 
 #### Form Group
 
@@ -147,13 +144,13 @@ Validation
 
 
 ### Validation
-- Template Driven Form + Directives：因為 template driven form 的 model 只會以 `[(ngModel)]=``"``someVal``"` 的形式存在於 template，component 中對有哪些值一無所知，所以一切驗證都得以 directive 的形式做在 template，無論現成格式 ex. required, minlength 或是自訂驗證都一樣。
+- Template Driven Form + Directives：因為 template driven form 的 model 只會以 `html±[(ngModel)]="someVal"` 的形式存在於 template，component 中對有哪些值一無所知，所以一切驗證都得以 directive 的形式做在 template，無論現成格式 ex. required, minlength 或是自訂驗證都一樣。
 
 - Reactive Form：因為 component 控制了值的一切（包括設定 initial value），所以可以在 component 中處理驗證。這種方式的可控性更高，validator 也只要以 function 存在即可，不需要加工成 directive。
 
 #### 跨欄位驗證 (Cross-field Validation)
 
-- Reactive Form: 將驗證規則放在 form level，這個 validator function 可以存取到整個 `FormGroup` control，再去 `.get('name'), .get('age')` 去做比較就可以了
+- Reactive Form: 將驗證規則放在 form level，這個 validator function 可以存取到整個 `FormGroup` control，再去 `javascript±.get('name')`, `javascript±.get('age')` 去做比較就可以了
 - Template Driven Form: 將驗證規則的 directive 放在 form level 的 HTML，例如 `html±<form #heroForm="ngForm" appIdentityRevealed>` 。
 - 其實跟 single field 的規則一樣，只是往上拉一個層級
 - "Control" 可能是指「單一欄位(field)」的 control，也可能是指「整個表單」的 control

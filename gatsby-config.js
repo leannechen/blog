@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `倉鼠型前端工程師`,
-    description: `工程師搜集知識就像倉鼠囤積食物的快樂`,
+    description: `工作筆記存放區`,
     author: `Leanne Chen`,
   },
   plugins: [
