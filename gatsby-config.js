@@ -66,8 +66,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `倉鼠型前端工程師`,
+        short_name: `倉鼠型前端`,
         start_url: `/`,
         background_color: `#323031`,
         theme_color: `#FFC849`,
