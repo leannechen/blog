@@ -23,6 +23,7 @@ export default function About({ data }) {
       <ul>
         <li><a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a></li>
         <li><a href="https://www.gatsbyjs.org/" target="_blank" rel="noreferrer">Gatsby</a></li>
+        <li><a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL</a></li>
       </ul>
       <p>素材感謝：<a href="https://icooon-mono.com/" target="_blank" rel="noreferrer">ICOOON MONO</a></p>
       <Img fixed={data.file.childImageSharp.fixed} />
