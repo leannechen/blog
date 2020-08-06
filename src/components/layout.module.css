@@ -13,6 +13,26 @@
   text-decoration: none;
 }
 
+.main {
+  margin-bottom: 3rem;
+}
+
+.footer {
+  text-align: center;
+}
+
+.author-link:hover {
+  color: #ffb913;
+}
+
+.author {
+  margin-right: 4px;
+}
+
+.icon-peanut {
+  vertical-align: text-top;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     margin: 3rem 5%;

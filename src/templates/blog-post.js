@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,13 +17,6 @@ export default function BlogPost({ data }) {
         <Img fluid={featuredImgFluid} />
         <div className={blogPostStyles.markdown} dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
-      <hr/>
-      <footer>
-      {/* todo: About author image */}
-        <p>
-          Article by <Link to="/about/">Leanne</Link>
-        </p>
-      </footer>
     </Layout>
   )
 }
